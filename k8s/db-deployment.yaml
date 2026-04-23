@@ -34,6 +34,8 @@ spec:
               value: postgres
           image: postgres
           name: db
+          securityContext:
+            readOnlyRootFilesystem: true
           resources: {}
           volumeMounts:
             - mountPath: /var/lib/postgresql/data
