@@ -37,7 +37,7 @@ spec:
             - mountPath: /app
               name: migration-claim0
           securityContext:
-              privileged: true
+              privileged: false
       restartPolicy: Always
       volumes:
         - name: migration-claim0
