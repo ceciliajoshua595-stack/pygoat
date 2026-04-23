@@ -35,6 +35,10 @@ spec:
           ports:
             - containerPort: 8000
           resources: {}
+          securityContext:
+            capabilities:
+              drop:
+                - NET_RAW
           volumeMounts:
             - mountPath: /app
               name: web-claim0

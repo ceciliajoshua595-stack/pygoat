@@ -35,6 +35,10 @@ spec:
           image: postgres
           name: db
           resources: {}
+          securityContext:
+            capabilities:
+              drop:
+                - NET_RAW
           volumeMounts:
             - mountPath: /var/lib/postgresql/data
               name: db-claim0
