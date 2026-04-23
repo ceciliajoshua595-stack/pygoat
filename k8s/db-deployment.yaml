@@ -35,6 +35,8 @@ spec:
           image: postgres
           name: db
           resources: {}
+          securityContext:
+            allowPrivilegeEscalation: false
           volumeMounts:
             - mountPath: /var/lib/postgresql/data
               name: db-claim0
