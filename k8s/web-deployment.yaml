@@ -35,6 +35,8 @@ spec:
           ports:
             - containerPort: 8000
           resources: {}
+          securityContext:
+            allowPrivilegeEscalation: false
           volumeMounts:
             - mountPath: /app
               name: web-claim0
